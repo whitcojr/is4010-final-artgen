@@ -6,7 +6,7 @@
 
 ## 📝 Project Description
 
-A fun, fast, and feature-rich command-line interface written in **Rust** to convert plain text into beautiful ASCII art using standard and custom FIGlet fonts. This project serves as the final submission for **IS4010**.
+A fun, fast, and feature-rich command-line interface written in **Rust** to convert plain text into beautiful ASCII art using standard font. 
 
 ---
 
@@ -59,51 +59,37 @@ cargo run -- "Hello World"
 Generate ASCII art using the default font:
 
 ```bash
-cargo run -- "IS4010"
+cargo run -- "Luke Skywalker"
 ```
 
 Output:
 ```
- ___ ____  _  _  ___  ___ 
-|_ _/ ___|| || ||_ _|/ _ \
- | |\___ \| || | | | | | | |
- | | ___) |__  _| | | |_| |
-|___|____/   |_|___| \___/ 
+  _               _               ____    _                                 _   _
+ | |      _   _  | | __   ___    / ___|  | | __  _   _  __      __   __ _  | | | | __   ___   _ __
+ | |     | | | | | |/ /  / _ \   \___ \  | |/ / | | | | \ \ /\ / /  / _` | | | |/ /  / _ \ | '__|
+ | |___  | |_| | |   <  |  __/    ___) | |   <  | |_| |  \ V  V /  | (_| | | | |   <  |  __/ | |
+ |_____|  \__,_| |_|\_\  \___|   |____/  |_|\_\  \__, |   \_/\_/    \__,_| |_| |_|\_\  \___| |_|
+                                                 |___/
 ```
 
-### Example 2: Using Different Fonts
-
-Test different font options (all use standard in version 0.1.5):
-
-```bash
-# Slant font style
-cargo run -- --font slant "Rust"
-
-# Chunky font style
-cargo run -- -f chunky "CODE"
-
-# Starwars font (Star Wars themed)
-cargo run -- --font starwars "EPIC"
-```
-
-### Example 3: Long Text
+### Example 2: Long Text
 
 The tool handles longer text gracefully:
 
 ```bash
-cargo run -- "Welcome to IS4010"
+cargo run -- "May the force be with you."
 ```
 
-### Example 4: Special Characters
+### Example 3: Special Characters
 
 Works with numbers and special characters:
 
 ```bash
 cargo run -- "2025!"
-cargo run -- "Project#1"
+cargo run -- "Order#66"
 ```
 
-### Example 5: Help and Options
+### Example 4: Help and Options
 
 View all available options:
 
@@ -119,12 +105,11 @@ Arguments:
   <TEXT>  The text to convert into ASCII art
 
 Options:
-  -f, --font <FONT>  Specify the font to use (e.g., 'standard') [default: standard]
   -h, --help         Print help
   -V, --version      Print version
 ```
 
-### Example 6: Running the Release Binary
+### Example 5: Running the Release Binary
 
 After building a release version, run it directly:
 
