@@ -1,0 +1,36 @@
+# Generated files
+/target/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+*.sublime-project
+*.sublime-workspace
+
+# Binaries/Executables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Cargo lock file (optional - include for binaries, exclude for libraries)
+Cargo.lock
+
+# IDE-specific files
+.settings/
+.metadata/
+.classpath
+
+# macOS
+.AppleDouble
+.LSOverride
+._*

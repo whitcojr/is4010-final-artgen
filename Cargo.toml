@@ -1,0 +1,25 @@
+[package]
+name = "is4010-final-artgen"
+version = "0.1.0"
+edition = "2021"
+authors = ["Jeff Whitcomb <whitcojr@mail.uc.edu>"]
+description = "A fun CLI tool to generate ASCII art from text for the IS4010 Final Project."
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/whitcojr/is4010-final-artgen"
+keywords = ["cli", "ascii", "art", "figlet"]
+# New: Add Rust specific metadata for crates.io badge
+categories = ["command-line-utilities", "text-processing"]
+
+[dependencies]
+# Argument Parsing
+clap = { version = "4.4", features = ["derive"] }
+# The core library for ASCII art generation using FIGlet fonts
+figlet-rs = "0.1.5"
+# For easy error handling
+anyhow = "1.0"
+
+[dev-dependencies]
+# For integration testing
+assert_cmd = "2.0"
+predicates = "3.0"
