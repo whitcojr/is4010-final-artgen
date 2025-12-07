@@ -1,6 +1,6 @@
+use anyhow::{anyhow, Result};
 use clap::Parser;
 use figlet_rs::FIGfont;
-use anyhow::{Result, anyhow};
 
 /// The IS4010 Final Project: A fun CLI tool to generate ASCII art from text.
 #[derive(Parser, Debug)]
@@ -27,17 +27,21 @@ fn main() -> Result<()> {
         }
         // Fallback for an unknown font name
         _ => {
-            eprintln!("Warning: Font '{}' not found. Using 'standard' font.", args.font);
+            eprintln!(
+                "Warning: Font '{}' not found. Using 'standard' font.",
+                args.font
+            );
             FIGfont::standard().map_err(|e| anyhow!(e))?
         }
     };
-    
+
     // 3. Generate the ASCII art
-    let figure = font.convert(&args.text)
+    let figure = font
+        .convert(&args.text)
         .ok_or_else(|| anyhow!("Failed to convert text to ASCII art"))?;
 
     // 4. Print the result
     println!("{}", figure);
-    
+
     Ok(())
 }

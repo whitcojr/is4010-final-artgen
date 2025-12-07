@@ -1,6 +1,6 @@
 # 🎨 IS4010-Final-ArtGen: Terminal Art Generator
 
-[![Rust CI Status](https://github.com/YourUsername/is4010-final-artgen/actions/workflows/tests.yml/badge.svg)](https://github.com/YourUsername/is4010-final-artgen/actions/workflows/tests.yml)
+[![Rust CI Status](https://github.com/whitcojr/is4010-final-artgen/actions/workflows/tests.yml/badge.svg)](https://github.com/whitcojr/is4010-final-artgen/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Built with Rust](https://img.shields.io/badge/Language-Rust--2021-orange?logo=rust)](https://www.rust-lang.org/)
 
@@ -27,9 +27,9 @@ The application can perform the following key functions:
 
 To get the application running on your machine:
 
-1.  **Clone the repository** (replace `YourUsername` with your GitHub username):
+1.  **Clone the repository** :
     ```bash
-    git clone [https://github.com/YourUsername/is4010-final-artgen.git](https://github.com/YourUsername/is4010-final-artgen.git)
+    git clone [https://github.com/whitcojr/is4010-final-artgen](https://github.com/whitcojr/is4010-final-artgen)
     cd is4010-final-artgen
     ```
 2.  **Build the executable** (the `--release` flag ensures optimal speed):

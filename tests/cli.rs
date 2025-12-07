@@ -9,11 +9,11 @@ fn runs_with_valid_input() -> Result<(), Box<dyn std::error::Error>> {
     let mut cmd = Command::cargo_bin("is4010-final-artgen")?;
 
     cmd.arg("IS4010");
-    
+
     // Check for successful execution and a recognizable fragment of "IS4010"
     cmd.assert()
         .success()
-        .stdout(predicate::str::contains("____")); 
+        .stdout(predicate::str::contains("____"));
 
     Ok(())
 }
@@ -24,9 +24,9 @@ fn fails_without_required_argument() -> Result<(), Box<dyn std::error::Error>> {
     let mut cmd = Command::cargo_bin("is4010-final-artgen")?;
 
     // Check for failure (exit code 2) when no text argument is provided
-    cmd.assert()
-        .failure()
-        .stderr(predicate::str::contains("required arguments were not provided"));
+    cmd.assert().failure().stderr(predicate::str::contains(
+        "required arguments were not provided",
+    ));
 
     Ok(())
 }
@@ -38,10 +38,8 @@ fn uses_starwars_font() -> Result<(), Box<dyn std::error::Error>> {
 
     // Test with the starwars font option (uses standard in this version)
     cmd.arg("Final").args(["--font", "starwars"]);
-    
-    cmd.assert()
-        .success()
-        .stdout(predicate::str::contains("_")); 
+
+    cmd.assert().success().stdout(predicate::str::contains("_"));
 
     Ok(())
 }
